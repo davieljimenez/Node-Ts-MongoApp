@@ -1,9 +1,11 @@
 import {Response, Request} from "express"
-import BookModel, {Book} from "../models/book.schema"
+import BookModel, {Book} from "../models/book.schema";
 class BooksController {
-   public index(req: Request, res:Response):void{
-       res.render("books/index",{
-           title:"Books"
+   public async index(req: Request, res:Response){
+       const books= await BookModel.find({});
+        res.render("books/index",{
+           title:"Books",
+           books
        });
    }
    

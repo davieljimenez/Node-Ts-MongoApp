@@ -1,0 +1,12 @@
+{{#if books}}
+{{#each books}}
+<div class="col-md-4">
+    <div class="card card-body">
+    <h3>{{book.title}}</h3>
+    <p>Author: {{book.author}}</p>
+    <p>ISBN: {{book.isbn}}</p>
+</div>
+</div>
+{{/each}}
+{{/if}}
+
